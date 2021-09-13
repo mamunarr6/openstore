@@ -57,7 +57,12 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = value.toFixed(2);
+  if (id === "delivery-charge") {
+    document.getElementById(id).innerText = value;
+  } else {
+    document.getElementById(id).innerText = value.toFixed(2);
+  }
+
 };
 
 // update delivery charge and total Tax
